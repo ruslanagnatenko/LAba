@@ -72,7 +72,7 @@ export const Menu = () => {
               <li className="nav__item">
                 <NavLink
                   className="nav__link"
-                  to="/contacts"
+                  to="./contacts"
                   onClick={goToPage}
                 >
                   Контакти

@@ -11,6 +11,7 @@ import { About } from './pages/About';
 import { CatalogPage } from './pages/CatalogPage';
 import { ProductPage } from './pages/ProductPage';
 import { ShoppingCart } from './pages/ShoppingCart';
+import { Footer } from './components/Footer';
 
 const App = () => {
   return (
@@ -22,7 +23,19 @@ const App = () => {
       <Routes>
         <Route path="/">
           <Route index element={<HomePage />} />
-          <Route path="menu" element={<Menu />} />
+          <Route path="menu">
+            <Route index element={<Menu />} />
+            <Route
+              path="contacts"
+              element={
+                (
+                  <div className="main-container">
+                    <Footer />
+                  </div>
+                )
+              }
+            />
+          </Route>
           <Route path="about" element={<About />} />
           <Route path="catalog">
             <Route index element={<CatalogPage />} />

@@ -19,21 +19,21 @@ export const AppContextContext = createContext({
   setFilter: () => { },
   preparedProductsForHomePage: [],
   currentPage: 1,
-  setCurrentPage: () => {},
+  setCurrentPage: () => { },
   productsLoading: false,
-  setProductsLoading: () => {},
+  setProductsLoading: () => { },
   productPageLoading: false,
-  setProductPageLoading: () => {},
+  setProductPageLoading: () => { },
   pageLoading: false,
-  setPageLoading: () => {},
-  scrollToTop: () => {},
-  goToPage: () => {},
+  setPageLoading: () => { },
+  scrollToTop: () => { },
+  goToPage: () => { },
   productAdded: false,
-  setProductAdded: () => {},
+  setProductAdded: () => { },
   addedProducts: [],
-  setAddedProducts: () => {},
+  setAddedProducts: () => { },
   productCount: 1,
-  setProductCount: () => {},
+  setProductCount: () => { },
 });
 
 const initialCatalogProducts = cards;
@@ -132,8 +132,8 @@ export const AppContextProvider = ({ children }) => {
   );
 
   const scrollToTop = () => {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
   };
 
   const goToPage = useCallback(
