@@ -1,6 +1,7 @@
 /* eslint-disable import/no-useless-path-segments */
 import classNames from 'classnames';
 import { NavLink } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import logo from '../.../../../content/icons/logo.svg';
 import menu from '../.../../../content/icons/icon-menu.svg';
 import wishlist from '../.../../../content/icons/icon-wishlist.svg';
@@ -68,13 +69,16 @@ export const TopBar = () => {
             </NavLink>
           </li>
           <li className="nav__item">
-            <NavLink
-              className={getLinkClass}
-              to="/contacts"
-              onClick={goToPage}
+            <ScrollLink
+              className="nav__link"
+              to="contacts"
+              spy
+              smooth
+              offset={-70} // Adjust this offset according to your layout
+              duration={500}
             >
               Контакти
-            </NavLink>
+            </ScrollLink>
           </li>
           <li className="nav__item">
             <NavLink

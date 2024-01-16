@@ -1,3 +1,4 @@
+import { Element } from 'react-scroll';
 import { Header } from './Header/Header';
 import { NewProducts } from '../../components/NewProducts';
 // eslint-disable-next-line import/no-useless-path-segments
@@ -29,7 +30,10 @@ export const HomePage = () => {
               <FAQ />
             </FaqContextProvider>
 
-            <Footer />
+            <Element name="contacts">
+              <Footer />
+            </Element>
+
           </div>
         )}
     </div>
