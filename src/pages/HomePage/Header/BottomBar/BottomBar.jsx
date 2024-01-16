@@ -22,7 +22,7 @@ export const BottomBar = () => {
 
       <Button
         text="До каталогу"
-        link="/catalog"
+        link="catalog"
         buttonClass="button-first-screen"
         onClick={goToPage}
       />
