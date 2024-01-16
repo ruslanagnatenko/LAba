@@ -1,0 +1,37 @@
+.bottom-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include onDesctop {
+    width: 626px;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onDesctop {
+      gap: 24px;
+    }
+  }
+}
+
+.bottom-bar__title {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 110%;
+
+  @include onDesctop {
+    font-size: 56px;
+  }
+}
+
+.bottom-bar__description {
+  @include bodyText;
+
+  @include onDesctop {
+    font-size: 20px;
+  }
+}

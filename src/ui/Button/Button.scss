@@ -1,0 +1,210 @@
+.button-first-screen {
+  height: 44px;
+
+  font-family: 'Raleway', serif;
+  text-align: center;
+  line-height: 44px;
+
+  font-size: 14px;
+
+    @include onDesctop {
+      font-size: 18px;
+    }
+
+  color: $c-white;
+  border-radius: 5px;
+  background: $c-accent-red;
+
+  @include onDesctop {
+    height: 56px;
+    width: 60%;
+
+    line-height: 56px;
+  }
+
+  @include hover (background-color, #c53d3d);
+
+  &:hover {
+    color: $c-white;
+  }
+}
+
+.button-product-default {
+  display: block;
+  width: 100%;
+  height: 44px;
+  background-color: $c-accent-red;
+  border-radius: 5px;
+
+  text-align: center;
+  font-size: 14px;
+  line-height: 44px;
+  color: $c-white;
+
+  @include onDesctop {
+    width: 70%;
+    height: 56px;
+    font-size: 18px;
+    line-height: 56px;
+
+    @include hover (background-color, #c53d3d);
+
+    &:hover {
+      color: $c-white;
+    }
+  }
+}
+
+.button-black {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px 14px;
+  background-color: $c-main-black;
+
+  font-family: 'Raleway', serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: $c-white;
+  border-radius: 5px;
+  border: none;
+  font-variant-numeric: lining-nums proportional-nums;
+
+  cursor: pointer;
+
+  &:visited {
+    color: $c-white;
+  }
+
+  @include onDesctop {
+    font-size: 18px;
+  }
+}
+
+.button-disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  width: 100%;
+  background-color: $c-white;
+
+  font-family: 'Raleway', serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: $c-mid-grey;
+
+  border: 1px solid $c-light-grey;
+  border-radius: 5px;
+
+  pointer-events: none;
+  cursor: none;
+
+  @include onDesctop {
+    font-size: 18px;
+  }
+}
+
+.button-brand {
+  font-family: 'Raleway', serif;
+  font-size: 14px;
+  line-height: 100%;
+  border: none;
+  background-color: transparent;
+  color: $c-main-black;
+  font-variant-numeric: lining-nums proportional-nums;
+
+  cursor: pointer;
+  @include hover(color, $c-accent-red);
+
+  &-active {
+    font-weight: 600;
+  }
+
+  @include onDesctop {
+    font-size: 18px;
+  }
+}
+
+.buttonDisabled {
+  color: $c-mid-grey;
+}
+
+.button-grey {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 14px;
+  width: 100%;
+  background-color: $c-white;
+
+  font-family: 'Raleway', serif;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  color: $c-mid-grey;
+  font-variant-numeric: lining-nums proportional-nums;
+
+  border: 1px solid $c-light-grey;
+  border-radius: 5px;
+}
+
+.buy {
+  height: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-family: 'Raleway', serif;
+  text-align: center;
+  line-height: 44px;
+  font-size: 14px;
+
+  color: $c-white;
+  border-radius: 5px;
+  background: $c-accent-red;
+
+  @include onDesctop {
+    height: 56px;
+    width: 60%;
+
+    line-height: 56px;
+  }
+
+  @include hover (background-color, #c53d3d);
+}
+.wishlist-button {
+  height: 44px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+
+  font-family: 'Raleway', serif;
+  text-align: center;
+  line-height: 44px;
+  font-size: 14px;
+
+  color: $c-accent-red;
+  border-radius: 5px;
+  border: 1px solid $c-accent-red;
+  background: $c-white;
+
+
+
+  @include onDesctop {
+    height: 56px;
+    width: 60%;
+
+    line-height: 56px;
+  }
+
+  @include hover (background-color, #f6f6f6);
+}
+

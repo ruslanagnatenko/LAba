@@ -1,0 +1,28 @@
+.nav {
+  &__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+
+    @include onDesctop {
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    font-size: 18px;
+    line-height: 100%;
+    padding-block: 10px;
+
+    color: $c-main-black;@include hover(color, $c-accent-red);
+  }
+}
+
+.isActive {
+  font-weight: 700;
+  color: $c-accent-red;
+}

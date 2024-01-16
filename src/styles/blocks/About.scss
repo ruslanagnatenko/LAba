@@ -1,0 +1,66 @@
+.about {
+  &__content {
+    @include grid;
+  }
+
+  &__photo {
+    @include onDesctop {
+      order: 2;
+    }
+  }
+
+  &__header {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin-bottom: 36px;
+
+    @include onDesctop {
+      grid-column: span 12;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-bottom: 72px;
+    }
+  }
+
+  &__description {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onDesctop {
+      max-width: 628px;
+      justify-content: space-between;
+    }
+  }
+
+  &__cards {
+    grid-column: span 4;
+
+    @include grid;
+    row-gap: 24px;
+
+    @include onDesctop {
+      grid-column: span 12;
+    }
+  }
+
+  &__card {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    text-align: center;
+
+    @include onDesctop {
+      grid-column: span 3;
+      @include hover(transform, scale(1.1));
+    }
+  }
+
+  &__card-photo {
+    border-radius: 5px;
+  }
+}

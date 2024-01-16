@@ -1,0 +1,56 @@
+.catalog {
+  @include grid;
+
+  row-gap: 36px;
+
+  @include onDesctop {
+    row-gap: 64px;
+  }
+
+  &__products {
+    @include grid;
+
+    grid-column: span 4;
+    gap: 24px;
+
+    @include onDesctop {
+      grid-column: span 12;
+    }
+  }
+
+  &__sideBar {
+    grid-column: span 4;
+
+    @include onDesctop {
+      grid-column: 1/10;
+    }
+  }
+
+  &__title-no-products {
+    grid-column: span 4;
+    color: $c-mid-grey;
+
+    font-size: 14px;
+    text-align: center;
+
+    @include onDesctop {
+      font-size: 20px;
+    }
+  }
+
+  &__see-more {
+    grid-column: span 4;
+    text-align: center;
+    color: $c-main-black;
+    font-size: 14px;
+    text-decoration: underline;
+
+    @include hover(color, $c-accent-red);
+
+    @include onDesctop {
+      font-size: 20px;
+      grid-column: span 12;
+      text-align: center;
+    }
+  }
+}

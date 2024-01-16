@@ -1,0 +1,62 @@
+.nav-bar {
+  @include onDesctop {
+    display: flex;
+    flex-direction: column;
+    gap: 44px;
+  }
+
+  &--onDesktop {
+    display: none;
+
+    @include onDesctop {
+      grid-column: span 3;
+      display: block;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+  }
+
+  &__title {
+    display: none;
+
+    @include onDesctop {
+      display: block;
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 100%;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__contact-item {
+    display: flex;
+    gap: 12px;
+    align-items: center
+  }
+
+  &__link {
+    @include bodyText;
+    font-variant-numeric: lining-nums proportional-nums;
+    @include hover(color, $c-accent-red);
+  }
+}
+
+.secondary-nav {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__link {
+    color: $c-mid-grey;
+    font-size: 12px;
+    line-height: 140%;
+  }
+}

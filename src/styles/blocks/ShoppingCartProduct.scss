@@ -1,0 +1,132 @@
+.shoppingCartProduct {
+  @include grid;
+
+  @include onDesctop {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  &__header {
+    grid-column: span 1;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onDesctop {
+      grid-column: span 2;
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  &__counters {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    @include onDesctop {
+      gap: 14px;
+      align-items: center;
+    }
+  }
+
+  &__body {
+    grid-column: 2/4;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    @include onDesctop {
+      grid-column: 3/6;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+    }
+  }
+
+  &__name {
+    @include bodyText;
+    font-weight: 600;
+  }
+
+  &__price {
+    @include bodyText;
+    font-size: 20px;
+    line-height: 100%;
+
+    @include onDesctop {
+      font-size: 36px;
+    }
+  }
+
+  &__size {
+    @include bodyText;
+    line-height: 100%;
+  }
+
+  &__counter {
+    @include bodyText;
+  }
+
+  &__count {
+    @include bodyText;
+  }
+
+  &__end {
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    @include onDesctop {
+      grid-column: -1;
+    }
+  }
+
+  &__close {
+    display: block;
+
+    @include onDesctop {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__button-close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include onDesctop {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &__price-section {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+.non-visible-on-desctop {
+  @include onDesctop {
+    display: none;
+  }
+}
+
+.non-visible-on-mobile {
+  display: none;
+
+  @include onDesctop {
+    display: flex;
+  }
+}

@@ -1,0 +1,100 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @include onDesctop {
+    justify-content: left;
+    gap: 16px;
+  }
+}
+
+.productPage {
+  &__content {
+    @include grid;
+    row-gap: 44px;
+  }
+
+  &__navigation {
+    grid-column: span 4;
+
+    @include onDesctop {
+      grid-column: span 12;
+    }
+  }
+
+  &__main {
+    grid-column: span 4;
+    @include grid;
+    row-gap: 24px;
+    position: relative;
+
+    @include onDesctop {
+      grid-column: span 12;
+      row-gap: 44px;
+    }
+  }
+
+  &__title {
+    grid-column: span 4;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 140%;
+
+    @include onDesctop {
+      font-size: 36px;
+    }
+  }
+
+  &__photo {
+    display: block;
+    grid-column: span 4;
+    width: 100%;
+
+    @include onDesctop {
+      position: absolute;
+      right: 0;
+      top: 0;
+
+      width: 628px;
+    }
+  }
+
+  &__section {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    font-variant-numeric: lining-nums proportional-nums;
+
+    @include onDesctop {
+      grid-column: 1/6;
+    }
+  }
+
+  &__sizes {
+    grid-column: span 4;
+    @include grid;
+    column-gap: 12px;
+    row-gap: 16px;
+  }
+
+  &__buttons {
+    grid-column: span 4;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onDesctop {
+      grid-column: 1/6;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__button-icon {
+    display: block;
+    width: 18px;
+    height: 18px;
+  }
+}

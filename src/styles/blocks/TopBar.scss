@@ -1,0 +1,65 @@
+.top-bar {
+  grid-column: span 4;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 20px;
+
+  @include onDesctop {
+    & {
+      grid-column: span 12;
+      z-index: 1;
+      padding-bottom: 100px;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    gap: 20px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
+
+  &__nav {
+    display: none;
+
+    @include onDesctop {
+      display: block;
+    }
+  }
+}
+
+.logo {
+  display: none;
+
+  @include onDesctop {
+    display: block;
+  }
+
+  &__img {
+    @include onDesctop {
+      display: block;
+      height: 78px;
+    }
+  }
+
+  @include hover(transform, scale(1.2));
+}
+
+.icon--menu {
+  @include onDesctop {
+    display: none;
+  }
+}
+
+.icon--shoping-cart {
+  @include hover(transform, scale(1.2));
+}
+
+.icon--wishlist {
+  @include hover(transform, scale(1.2));
+}

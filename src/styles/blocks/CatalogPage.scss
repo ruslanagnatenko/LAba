@@ -1,0 +1,22 @@
+.catalogPage {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-height: 1461px;
+
+  @include onDesctop {
+    gap: 48px;
+    max-height: 1240px;
+  }
+
+  &__products {
+    @include grid;
+    grid-column: span 4;
+    gap: 24px;
+    height: 1235px;
+
+    @include onDesctop {
+      grid-column: span 12;
+    }
+  }
+}

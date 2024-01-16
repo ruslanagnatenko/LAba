@@ -1,0 +1,95 @@
+// style go here
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import './utils/mixins';
+@import './utils/vars';
+@import './blocks/TopBar';
+@import './blocks/Header';
+@import './blocks/BottomBar';
+@import './../ui/Button/Button';
+@import './blocks/nav';
+@import './blocks/Menu';
+@import './blocks/New';
+@import './blocks/section-title';
+@import './blocks/Product';
+@import './blocks/Catalog';
+@import './blocks/SideBar';
+@import './blocks/Faq';
+@import './blocks/nav-bar';
+@import './blocks/Footer';
+@import './blocks/Loader';
+@import './blocks/About';
+@import './blocks/CatalogPage';
+@import './blocks/Pagination';
+@import './blocks/ProductPage';
+@import './blocks/secondaryText';
+@import './blocks/Accordeon';
+@import './blocks/YouMightAlsoLike';
+@import './blocks/ProductPageAlert';
+@import './blocks/ShoppingCart';
+@import './blocks/ShoppingCartProduct';
+@import './blocks/ConfirmOrderForm';
+
+iframe {
+  display: none;
+}
+
+.fw {
+  width: 100%;
+}
+
+* {
+  font-family: "Raleway" ,serif;
+}
+
+.pageLoad {
+  height: 100vh;
+  position: relative;
+}
+
+.pageItem {
+  padding: 0;
+  border: none;
+}
+
+.main-container {
+  @include contentPaddingInline;
+
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+
+  @include onDesctop {
+    gap: 120px;
+  }
+
+  font-family: "Raleway", serif;
+  scroll-behavior: smooth;
+  color: $c-main-black;
+}
+
+.region-out {
+  grid-column: span 4;
+
+  @include onDesctop {
+    grid-column: span 12;
+  }
+}
+
+.bodytext {
+  @include bodyText;
+}
+
+.h1 {
+  @include h1;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.alert__bg {
+  opacity: 20%;
+}

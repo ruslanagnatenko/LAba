@@ -1,0 +1,124 @@
+.faq {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+
+  @include onDesctop {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__photo {
+    @include onDesctop {
+      order: 2;
+      height: 591px;
+    }
+  }
+
+  &__form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    @include onDesctop {
+      gap: 44px;
+    }
+  }
+
+  &__form-top {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include onDesctop {
+      grid-column: span 5;
+    }
+  }
+
+  &__input {
+    font-family: 'Raleway', serif;
+  }
+
+  &__alert {
+    position: absolute;
+    left: 10%;
+    top: 40%;
+    height: 25%;
+    width: 80%;
+    padding-inline: 20px;
+
+    background-color: $c-white;
+    box-shadow: 14px 14px 12px 0px rgba(0, 0, 0, 0.04), -14px -14px 12px 0px rgba(0, 0, 0, 0.04);
+    border-radius: 5px;
+
+    @include onDesctop {
+      left: 25%;
+      height: 50%;
+      width: 25%;
+      padding-inline: 20px;
+    }
+
+    &-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+      margin-inline: auto;
+      margin-block: 15%;
+      text-align: center;
+      font-size: 14px;
+      color: $c-main-black;
+
+      @include onDesctop {
+        text-align: center;
+        margin-inline: auto;
+        margin-block: 25%;
+        font-size: 18px;
+      }
+    }
+  }
+
+  &__icon {
+    display: block;
+    width: 36px;
+    height: 36px;
+  }
+
+  &__close-icon {
+    position: absolute;
+    display: block;
+    right: 20px;
+    top: 20px;
+    width: 14px;
+    height: 14px;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+
+    @include onDesctop {
+      right: 20px;
+      top: 20px;
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__close-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.button-light {
+  background-color: #ff7b7b;
+}

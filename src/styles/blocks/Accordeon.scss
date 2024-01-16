@@ -1,0 +1,48 @@
+.accordeon {
+  grid-column: span 4;
+
+  @include onDesctop {
+    grid-column: 1/6;
+  }
+
+  &__header {
+    @include grid;
+
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 10px 16px;
+    border-bottom: 1px solid $c-light-grey;
+    cursor: pointer;
+  }
+
+  &__title {
+    grid-column: span 3;
+
+    @include bodyText;
+
+    text-align: left;
+
+    @include onDesctop {
+      grid-column: span 12;
+    }
+  }
+
+  &__status {
+    grid-column: -1;
+  }
+
+  &__content {
+    grid-column: span 4;
+    display: block;
+    width: 100%;
+    text-align: left;
+    color: $c-mid-grey;
+
+    margin-top: 12px;
+
+    @include onDesctop {
+      grid-column: span 11;
+    }
+  }
+}

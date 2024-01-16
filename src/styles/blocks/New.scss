@@ -1,0 +1,33 @@
+.new {
+  @include grid;
+  row-gap: 36px;
+
+  @include onDesctop {
+    row-gap: 64px;
+  }
+
+  &__title {
+    grid-column: span 4;
+  }
+
+  &__products {
+    grid-column: span 4;
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+
+    @include onDesctop {
+      grid-column: span 12;
+
+      @include grid;
+    }
+  }
+
+  &__product {
+    min-width: 150px;
+
+    @include onDesctop {
+      grid-column: span 3;
+    }
+  }
+}

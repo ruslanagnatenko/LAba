@@ -1,0 +1,32 @@
+.sideBar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @include onDesctop {
+    flex-direction: row;
+    gap: 64px;
+    align-items: center;
+  }
+
+  &__sortdBy {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__nav {
+    &-list {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+
+      @include onDesctop {
+        gap: 40px;
+      }
+    }
+
+    &-item {
+      display: inline;
+    }
+  }
+}
