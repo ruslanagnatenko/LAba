@@ -11,7 +11,11 @@ export const ShoppingCart = () => {
 
   // eslint-disable-next-line no-nested-ternary
   const sum = addedProducts.length
-    ? addedProducts.reduce((a, b) => a.price + b.price)
+    ? addedProducts.reduce((accumulator, currentProduct) => {
+      const productValue = currentProduct.price * currentProduct.count;
+
+      return accumulator + productValue;
+    }, 0)
     : 0;
   const productsAmount = addedProducts.length;
 

@@ -56,6 +56,7 @@ export const ProductPageAlert = ({ product }) => {
         <button
           type="button"
           className="productPageAlert__btn-black"
+          onClick={() => setProductAdded(false)}
         >
           Продовжити покупку
         </button>
